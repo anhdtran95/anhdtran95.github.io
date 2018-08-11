@@ -46,8 +46,13 @@ input {
   display: none;
 }
 
+#tab_wrapper{
+    display: table;
+}
+
 label {
-  display: inline-block;
+  display: table-cell;
+  width: 100%;
   margin: 0 0 -1px;
   padding: 15px 25px;
   font-weight: 600;
