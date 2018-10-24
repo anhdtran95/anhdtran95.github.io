@@ -81,18 +81,19 @@ nav {
 
 #first_left, #second_left {
   width: 50%;
-  float: left;
+  /* float: left; */
 }
 
 #first_right, #second_right {
   width: 50%;
-  float: right;
+  /* float: right; */
 }
 
 #first_right, #second_left, #second_right {
   text-align: center;
 }
 
+#first_left, #first_right,
 #second_left, #second_right{
   margin: 30px;
 }
