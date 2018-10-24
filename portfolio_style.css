@@ -1,0 +1,190 @@
+#nav_left {
+  float: left;
+  width: 33%;
+}
+
+#nav_right {
+  float: right;
+  width: 33%;
+}
+
+#nav_mid {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#nav_left .nav li {
+  float: left;
+}
+
+#nav_right .nav li {
+  float: right;
+}
+
+.nav li a {
+  color: rgba(255, 255, 255, 0.336);
+  font-size: 12px;
+}
+
+.nav li:hover a {
+  background-color: transparent;
+  color: white;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.377);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/*
+body {
+    background-image: url(snow_mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif !important;
+    
+}
+*/
+
+#overlay {
+  background-color: rgba(212, 212, 212, 0.795);
+  margin: 50px 35px;
+  border-radius: 5px;
+}
+
+#first_content, #second_content {
+  padding: 10px 30px;
+}
+
+/*This is to fix the children height flowing out of parent*/
+
+#first_content:after, #second_content:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+#first_left {
+  width: 60%;
+  float: left;
+}
+
+#first_right {
+  width: 40%;
+  float: right;
+}
+
+#second_middle {
+  display: block;
+  text-align: center;
+}
+
+#second_left {
+  width: 50%;
+  float: left;
+}
+
+#second_right {
+  width: 50%;
+  float: right;
+}
+
+#cv_button {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  background-color: rgba(0, 255, 234, 0.692);
+  border-radius: 7px;
+  border: 0;
+}
+
+body {
+  /*
+    background-image: url(snow_mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+  background-color: rgb(255, 82, 97);
+}
+
+.main {
+  position: relative;
+  display: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.mb-wrap {
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  /*width: 300px;*/
+}
+
+.mb-wrap p {
+  margin: 0;
+  padding: 0;
+}
+
+.mb-wrap blockquote {
+  margin: 20px 80px 0 80px;
+  padding-top: 150px;
+  position: relative;
+}
+
+.mb-style-2 blockquote:after {
+  content: "❞";
+  font-size: 70px;
+  position: absolute;
+  bottom: -70px;
+}
+
+.mb-style-2 blockquote:before {
+  content: "❝";
+  font-size: 70px;
+  position: absolute;
+  left: -20px;
+  top: 100px;
+}
+
+.mb-style-2 blockquote p {
+  /*
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 -6px 0 rgba(221, 221, 221, 0.8); 
+    color: rgba(68, 68, 68, 0.8);*/
+  display: inline;
+  font-family: Baskerville, Georgia, serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 46px;
+  text-shadow: 0 1px 1px rgba(133, 23, 23, 0.5);
+}
+
+.mb-attribution {
+  text-align: right;
+  padding-right: 30px;
+}
+
+.mb-author {
+  /*
+    color: rgb(71, 71, 71);*/
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+blockquote {
+  border-left: none;
+}
