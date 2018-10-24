@@ -29,7 +29,7 @@ body {
   font-size: 16px;
 }
 
-#nav_right a {
+#nav_right a:not(.current) {
   color: rgb(99, 99, 99);
   /* text-shadow: 0 .05px .05px rgba(3, 3, 3, 0.726); */
   font-size: 12px;
@@ -51,6 +51,10 @@ nav {
   z-index: 1000;
 }
 
+.nav li a.current{
+  color: white;
+  font-size: 12px;
+}
 /* navigation bar */
 
 /* overlay for content */
