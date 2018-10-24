@@ -22,7 +22,7 @@
 }
 
 .nav li a {
-  color: rgba(255, 255, 255, 0.336);
+  color: rgba(58, 58, 58, 0.336);
   font-size: 12px;
 }
 
@@ -39,16 +39,6 @@ nav {
   display: flex;
   align-items: center;
 }
-
-/*
-body {
-    background-image: url(snow_mountain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif !important;
-    
-}
-*/
 
 #overlay {
   background-color: rgba(212, 212, 212, 0.795);
@@ -109,7 +99,7 @@ body {
     background-size: cover;
     */
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-  background-color: rgb(255, 82, 97);
+  background-color: rgb(194, 194, 194);
 }
 
 .main {
