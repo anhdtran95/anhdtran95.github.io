@@ -1,18 +1,14 @@
 /*entire body*/
+
 body {
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-  background-color: rgb(194, 194, 194);
+  background-image: linear-gradient( rgb(255, 94, 0), #bdf006);
 }
 
 /* navigation bar */
+
 #nav_left {
   float: left;
-}
-
-#nav_left a{
-  color:white; 
-  text-shadow: 0 .2px .2px rgba(3, 3, 3, 0.726);
-  font-size: 16px;
 }
 
 #nav_right {
@@ -27,9 +23,15 @@ body {
   float: right;
 }
 
-.nav li a {
-  color: rgba(58, 58, 58, 0.733);
+#nav_left a {
+  color: white;
   text-shadow: 0 .2px .2px rgba(3, 3, 3, 0.726);
+  font-size: 16px;
+}
+
+#nav_right a {
+  color: rgb(99, 99, 99);
+  /* text-shadow: 0 .05px .05px rgba(3, 3, 3, 0.726); */
   font-size: 12px;
 }
 
@@ -48,14 +50,17 @@ nav {
   justify-content: space-between;
   z-index: 1000;
 }
+
 /* navigation bar */
 
 /* overlay for content */
+
 #overlay {
   /* background-color: rgba(168, 47, 47, 0.377); */
   margin: 40px 35px;
   /* border-radius: 5px; */
 }
+
 /* overlay for content */
 
 #my_name {
@@ -103,7 +108,6 @@ nav {
   /* position: relative; */
 }
 
-
 @media screen and (max-width:800px) {
   #about_me, #previous_works {
     justify-content: space-between;
@@ -131,20 +135,21 @@ nav {
   text-align: center;
 }
 
-body {
-  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-  background-color: rgb(194, 194, 194);
-}
-
 #previous_works div {
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */
 }
 
 #previous_works div:hover {
-  filter: none; /* IE6-9 */
-  -webkit-filter: grayscale(0%); /* Chrome 19+ & Safari 6+ */
+  filter: none;
+  /* IE6-9 */
+  -webkit-filter: grayscale(0%);
+  /* Chrome 19+ & Safari 6+ */
   cursor: pointer;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.514);
+  ;
 }
 
 #previous_works div p {
