@@ -47,10 +47,18 @@ nav {
 }
 
 #about_me, #previous_works {
-  height: 100vh;
-  padding: 10px 30px;
   display: flex;
   align-items: center;
+}
+
+#about_me{
+  height: 100vh;
+  padding: 10px 30px;
+}
+
+#previous_works{
+  height: 70vh;
+  padding: 10px;
 }
 
 /*This is to fix the children height flowing out of parent*/
@@ -79,6 +87,10 @@ nav {
   margin: 30px;
 }
 
+#second_middle {
+  display: block;
+  text-align: center;
+}
 /*chevron thing */
 .demo a {
   position: absolute;
