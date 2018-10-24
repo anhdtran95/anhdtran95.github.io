@@ -1,11 +1,11 @@
 #nav_left {
   float: left;
-  width: 48%;
+  /* width: 30%; */
 }
 
 #nav_right {
   float: right;
-  width: 48%;
+  /* width: 48%; */
 }
 
 #nav_mid {
