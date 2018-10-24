@@ -41,18 +41,21 @@ nav {
 }
 
 #overlay {
-  background-color: rgba(212, 212, 212, 0.795);
+  /*background-color: rgba(212, 212, 212, 0.795);*/
   margin: 50px 35px;
   border-radius: 5px;
 }
 
-#first_content, #second_content {
+#about_me, #previous_works {
+  height: 100vh;
   padding: 10px 30px;
+  display: flex;
+  align-items: center;
 }
 
 /*This is to fix the children height flowing out of parent*/
 
-#first_content:after, #second_content:after {
+#about_me:after, #previous_works:after {
   content: " ";
   display: block;
   clear: both;
@@ -68,6 +71,108 @@ nav {
   float: right;
 }
 
+/*chevron thing */
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+.chevron_down{
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+}
+
+#section03 a {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+}
+#section03 a span {
+  position: absolute;
+  bottom: -300%;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section03 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+#section03 a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*chevron thing */
 #second_middle {
   display: block;
   text-align: center;
@@ -83,14 +188,6 @@ nav {
   float: right;
 }
 
-#cv_button {
-  display: inline-block;
-  width: 250px;
-  height: 50px;
-  background-color: rgba(0, 255, 234, 0.692);
-  border-radius: 7px;
-  border: 0;
-}
 
 body {
   /*
@@ -102,79 +199,4 @@ body {
   background-color: rgb(194, 194, 194);
 }
 
-.main {
-  position: relative;
-  display: none;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
-}
 
-.mb-wrap {
-  margin: 20px auto;
-  padding: 20px;
-  position: relative;
-  /*width: 300px;*/
-}
-
-.mb-wrap p {
-  margin: 0;
-  padding: 0;
-}
-
-.mb-wrap blockquote {
-  margin: 20px 80px 0 80px;
-  padding-top: 150px;
-  position: relative;
-}
-
-.mb-style-2 blockquote:after {
-  content: "❞";
-  font-size: 70px;
-  position: absolute;
-  bottom: -70px;
-}
-
-.mb-style-2 blockquote:before {
-  content: "❝";
-  font-size: 70px;
-  position: absolute;
-  left: -20px;
-  top: 100px;
-}
-
-.mb-style-2 blockquote p {
-  /*
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
-    box-shadow: 0 -6px 0 rgba(221, 221, 221, 0.8); 
-    color: rgba(68, 68, 68, 0.8);*/
-  display: inline;
-  font-family: Baskerville, Georgia, serif;
-  font-style: italic;
-  font-size: 28px;
-  line-height: 46px;
-  text-shadow: 0 1px 1px rgba(133, 23, 23, 0.5);
-}
-
-.mb-attribution {
-  text-align: right;
-  padding-right: 30px;
-}
-
-.mb-author {
-  /*
-    color: rgb(71, 71, 71);*/
-  font-size: 18px;
-  font-weight: bold;
-  padding-top: 10px;
-  text-transform: uppercase;
-}
-
-blockquote {
-  border-left: none;
-}
