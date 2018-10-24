@@ -39,6 +39,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000;
 }
 
 #my_name {
@@ -57,7 +58,8 @@ nav {
 #about_me, #previous_works {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #about_me {
@@ -66,34 +68,41 @@ nav {
 }
 
 #previous_works {
-  height: 70vh;
+  min-height: 70vh;
   padding: 10px;
 }
 
 /*This is to fix the children height flowing out of parent*/
 
-#about_me:after, #previous_works:after {
+#about_me:after, #previous_works:after, #overlay {
   content: " ";
   display: block;
   clear: both;
 }
 
-#first_left, #second_left {
+#first_left, #first_right {
   width: 50%;
-  float: left;
+  position: relative;
 }
 
-#first_right, #second_right {
-  width: 50%;
-  float: left;
+#second_left, #second_right {
+  width: 38%;
+  position: relative;
 }
 
-@media only screen and (max-width: 480px) {
-  #first_left, #first_right {
-    width: 100% !important;
+
+
+@media screen and (max-width:800px) {
+  #about_me, #previous_works {
+    justify-content: space-between;
   }
-  #first_left{
-    text-align: center;
+  #first_left, #second_right {
+    width: 100%;
+    order: 2;
+  }
+  #first_right, #second_left {
+    width: 100%;
+    order: 1;
   }
 }
 
@@ -108,6 +117,23 @@ nav {
 #second_middle {
   display: block;
   text-align: center;
+}
+
+body {
+  /*
+    background-image: url(snow_mountain.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+  background-color: rgb(194, 194, 194);
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*chevron thing */
@@ -212,35 +238,3 @@ nav {
 }
 
 /*chevron thing */
-
-#second_middle {
-  display: block;
-  text-align: center;
-}
-
-#second_left {
-  width: 50%;
-  float: left;
-}
-
-#second_right {
-  width: 50%;
-  float: right;
-}
-
-body {
-  /*
-    background-image: url(snow_mountain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
-  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-  background-color: rgb(194, 194, 194);
-}
-
-.centered {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
