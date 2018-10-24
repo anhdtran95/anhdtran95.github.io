@@ -41,9 +41,8 @@ nav {
   justify-content: space-between;
 }
 
-
-#my_name{
-  color: rgb(31, 69, 139); 
+#my_name {
+  color: rgb(31, 69, 139);
   text-shadow: 0 1px 1px rgba(23, 133, 106, 0.5);
   /* to prevent line break within my name */
   white-space: nowrap;
@@ -61,12 +60,12 @@ nav {
   justify-content: space-between;
 }
 
-#about_me{
+#about_me {
   height: 100vh;
   padding: 10px 30px;
 }
 
-#previous_works{
+#previous_works {
   height: 70vh;
   padding: 10px;
 }
@@ -81,20 +80,28 @@ nav {
 
 #first_left, #second_left {
   width: 50%;
-  /* float: left; */
+  float: left;
 }
 
 #first_right, #second_right {
   width: 50%;
-  /* float: right; */
+  float: left;
+}
+
+@media only screen and (max-width: 480px) {
+  #first_left, #first_right {
+    width: 100% !important;
+  }
+  #first_left{
+    text-align: center;
+  }
 }
 
 #first_right, #second_left, #second_right {
   text-align: center;
 }
 
-#first_left, #first_right,
-#second_left, #second_right{
+#second_left, #second_right {
   margin: 30px;
 }
 
@@ -102,7 +109,9 @@ nav {
   display: block;
   text-align: center;
 }
+
 /*chevron thing */
+
 .demo a {
   position: absolute;
   bottom: 20px;
@@ -112,11 +121,12 @@ nav {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color: #fff;
-  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  font: normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
 }
+
 .demo a:hover {
   opacity: .5;
 }
@@ -126,9 +136,9 @@ nav {
   bottom: 10%;
   left: 50%;
 }
+
 #section03 a span {
   position: absolute;
-  
   left: 50%;
   width: 46px;
   height: 46px;
@@ -137,6 +147,7 @@ nav {
   border-radius: 100%;
   box-sizing: border-box;
 }
+
 #section03 a span::after {
   position: absolute;
   top: 50%;
@@ -151,6 +162,7 @@ nav {
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
+
 #section03 a span::before {
   position: absolute;
   top: 0;
@@ -159,13 +171,14 @@ nav {
   content: '';
   width: 44px;
   height: 44px;
-  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
   border-radius: 100%;
   opacity: 0;
   -webkit-animation: sdb03 3s infinite;
   animation: sdb03 3s infinite;
   box-sizing: border-box;
 }
+
 @-webkit-keyframes sdb03 {
   0% {
     opacity: 0;
@@ -174,13 +187,14 @@ nav {
     opacity: 1;
   }
   60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
     opacity: 0;
   }
   100% {
     opacity: 0;
   }
 }
+
 @keyframes sdb03 {
   0% {
     opacity: 0;
@@ -189,7 +203,7 @@ nav {
     opacity: 1;
   }
   60% {
-    box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
     opacity: 0;
   }
   100% {
@@ -198,6 +212,7 @@ nav {
 }
 
 /*chevron thing */
+
 #second_middle {
   display: block;
   text-align: center;
@@ -212,7 +227,6 @@ nav {
   width: 50%;
   float: right;
 }
-
 
 body {
   /*
