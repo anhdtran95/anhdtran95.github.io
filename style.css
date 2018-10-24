@@ -1,16 +1,22 @@
+/*entire body*/
+body {
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+  background-color: rgb(194, 194, 194);
+}
+
+/* navigation bar */
 #nav_left {
   float: left;
-  /* width: 30%; */
+}
+
+#nav_left a{
+  color:white; 
+  text-shadow: 0 .2px .2px rgba(3, 3, 3, 0.726);
+  font-size: 16px;
 }
 
 #nav_right {
   float: right;
-  /* width: 48%; */
-}
-
-#nav_mid {
-  display: inline-block;
-  margin: 0 auto;
 }
 
 #nav_left .nav li {
@@ -22,7 +28,8 @@
 }
 
 .nav li a {
-  color: rgba(58, 58, 58, 0.336);
+  color: rgba(58, 58, 58, 0.733);
+  text-shadow: 0 .2px .2px rgba(3, 3, 3, 0.726);
   font-size: 12px;
 }
 
@@ -41,18 +48,21 @@ nav {
   justify-content: space-between;
   z-index: 1000;
 }
+/* navigation bar */
+
+/* overlay for content */
+#overlay {
+  /* background-color: rgba(168, 47, 47, 0.377); */
+  margin: 40px 35px;
+  /* border-radius: 5px; */
+}
+/* overlay for content */
 
 #my_name {
   color: rgb(31, 69, 139);
   text-shadow: 0 1px 1px rgba(23, 133, 106, 0.5);
   /* to prevent line break within my name */
   white-space: nowrap;
-}
-
-#overlay {
-  /* background-color: rgba(168, 47, 47, 0.377); */
-  margin: 40px 35px;
-  /* border-radius: 5px; */
 }
 
 #about_me, #previous_works {
@@ -74,7 +84,7 @@ nav {
 
 /*This is to fix the children height flowing out of parent*/
 
-#about_me:after, #previous_works:after, #overlay {
+#about_me:after, #previous_works:after {
   content: " ";
   display: block;
   clear: both;
@@ -87,6 +97,9 @@ nav {
 
 #second_left, #second_right {
   width: 38%;
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
   /* position: relative; */
 }
 
@@ -119,11 +132,6 @@ nav {
 }
 
 body {
-  /*
-    background-image: url(snow_mountain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   background-color: rgb(194, 194, 194);
 }
@@ -146,10 +154,11 @@ body {
 #previous_works div:hover p {
   display: block;
 }
+
 .centered {
   font-size: 40px;
-  color: rgba(255, 255, 255, 0.836);
-  text-shadow: 0 2px 2px rgba(23, 39, 35, 0.5);
+  color: rgb(255, 255, 255);
+  text-shadow: 0 3px 3px rgba(17, 17, 17, 0.705);
   position: relative;
   top: 50%;
   left: 50%;
