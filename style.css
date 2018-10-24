@@ -45,7 +45,8 @@ nav {
 #my_name{
   color: rgb(31, 69, 139); 
   text-shadow: 0 1px 1px rgba(23, 133, 106, 0.5);
-  display: inline;
+  /* to prevent line break within my name */
+  white-space: nowrap;
 }
 
 #overlay {
