@@ -61,14 +61,22 @@ nav {
   clear: both;
 }
 
-#first_left {
-  width: 60%;
+#first_left, #second_left {
+  width: 50%;
   float: left;
 }
 
-#first_right {
-  width: 40%;
+#first_right, #second_right {
+  width: 50%;
   float: right;
+}
+
+#first_right, #second_left, #second_right {
+  text-align: center;
+}
+
+#second_left, #second_right{
+  margin: 30px;
 }
 
 /*chevron thing */
@@ -90,20 +98,14 @@ nav {
   opacity: .5;
 }
 
-.chevron_down{
-  position: absolute;
-  bottom: -5%;
-  left: 50%;
-}
-
 #section03 a {
   position: absolute;
-  bottom: -5%;
+  bottom: 10%;
   left: 50%;
 }
 #section03 a span {
   position: absolute;
-  bottom: -300%;
+  
   left: 50%;
   width: 46px;
   height: 46px;
@@ -199,4 +201,9 @@ body {
   background-color: rgb(194, 194, 194);
 }
 
-
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
