@@ -50,9 +50,9 @@ nav {
 }
 
 #overlay {
-  background-color: rgba(168, 47, 47, 0.377);
+  /* background-color: rgba(168, 47, 47, 0.377); */
   margin: 40px 35px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 #about_me, #previous_works {
@@ -82,14 +82,13 @@ nav {
 
 #first_left, #first_right {
   width: 50%;
-  position: relative;
+  /* position: relative; */
 }
 
 #second_left, #second_right {
   width: 38%;
-  position: relative;
+  /* position: relative; */
 }
-
 
 
 @media screen and (max-width:800px) {
@@ -129,7 +128,28 @@ body {
   background-color: rgb(194, 194, 194);
 }
 
+#previous_works div {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+
+#previous_works div:hover {
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0%); /* Chrome 19+ & Safari 6+ */
+  cursor: pointer;
+}
+
+#previous_works div p {
+  display: none;
+}
+
+#previous_works div:hover p {
+  display: block;
+}
 .centered {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.836);
+  text-shadow: 0 2px 2px rgba(23, 39, 35, 0.5);
   position: relative;
   top: 50%;
   left: 50%;
@@ -159,7 +179,7 @@ body {
 
 #section03 a {
   position: absolute;
-  bottom: 10%;
+  bottom: 0;
   left: 50%;
 }
 
