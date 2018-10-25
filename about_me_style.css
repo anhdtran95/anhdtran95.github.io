@@ -1,9 +1,10 @@
 /*entire body*/
 
 body {
-    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-    background-image: linear-gradient( rgb(255, 94, 0), #bdf006);
+    /*font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;*/
+    background: linear-gradient( rgb(255, 94, 0), #bdf006) fixed;
 }
+
 
 /* navigation bar */
 
@@ -115,10 +116,8 @@ h3 {
 
 /* Turn off parallax scrolling for tablets and phones */
 
-/*
 @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
         background-attachment: scroll;
     }
 }
-*/
