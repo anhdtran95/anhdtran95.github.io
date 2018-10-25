@@ -99,10 +99,14 @@ body, html {
 
 .caption span.border {
   background-color: rgba(43, 43, 43, 0.5);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 20px;
   color: #fff;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
+  line-height: 70px;
 }
 
 h3 {
@@ -292,9 +296,11 @@ h3 {
 }
 
 /*chevron thing */
-footer a{
+
+footer a {
   color: rgb(221, 221, 221);
 }
-footer a:hover{
+
+footer a:hover {
   color: rgba(221, 221, 221, 0.5);
 }

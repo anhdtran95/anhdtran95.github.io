@@ -17,6 +17,6 @@ $(function(){
 
 $("a[href*='#']").click(function() {
     var scrollDiv = $(this).attr('href');
-    var os = $(scrollDiv).offset().top;
+    var os = $(scrollDiv).offset().top - 200;
     $('html, body').animate({scrollTop:os}, 'slow');
 });  
