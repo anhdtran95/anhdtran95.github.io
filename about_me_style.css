@@ -1,16 +1,18 @@
+/*entire body*/
+
+body {
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+    background-image: linear-gradient( rgb(255, 94, 0), #bdf006);
+}
+
+/* navigation bar */
+
 #nav_left {
     float: left;
-    width: 33%;
 }
 
 #nav_right {
     float: right;
-    width: 33%;
-}
-
-#nav_mid {
-    display: inline-block;
-    margin: 0 auto;
 }
 
 #nav_left .nav li {
@@ -21,8 +23,15 @@
     float: right;
 }
 
-.nav li a {
-    color: rgba(255, 255, 255, 0.336);
+#nav_left a {
+    color: white;
+    text-shadow: 0 .2px .2px rgba(3, 3, 3, 0.726);
+    font-size: 16px;
+}
+
+#nav_right a:not(.current) {
+    color: rgb(99, 99, 99);
+    /* text-shadow: 0 .05px .05px rgba(3, 3, 3, 0.726); */
     font-size: 12px;
 }
 
@@ -38,144 +47,76 @@ nav {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
-/*
-body {
-    background-image: url(snow_mountain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif !important;
-    
-}
-*/
-#overlay {
-    background-color: rgba(212, 212, 212, 0.795);
-    margin: 50px 35px;
-    border-radius: 5px;
+.nav li a.current {
+    color: white;
+    font-size: 12px;
 }
 
-#first_content, #second_content {
-    padding: 10px 30px;
-}
+/*parallax effect*/ 
 
-/*This is to fix the children height flowing out of parent*/
-
-#first_content:after, #second_content:after {
-    content: " ";
-    display: block;
-    clear: both;
-}
-
-#first_left {
-    width: 60%;
-    float: left;
-}
-
-#first_right {
-    width: 40%;
-    float: right;
-}
-
-#second_middle {
-    display: block;
-    text-align: center;
-}
-
-#second_left {
-    width: 50%;
-    float: left;
-}
-
-#second_right {
-    width: 50%;
-    float: right;
-}
-
-#cv_button {
-    display: inline-block;
-    width: 250px;
-    height: 50px;
-    background-color: rgba(0, 255, 234, 0.692);
-    border-radius: 7px;
-    border: 0;
-}
-
-body {
-    /*
-    background-image: url(snow_mountain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
-    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
-    background-color: rgb(255, 82, 97);
-}
-
-.main {
-    position: relative;
-    display: none;
-}
-
-.mb-wrap {
-    margin: 20px auto;
-    padding: 20px;
-    position: relative;
-    /*width: 300px;*/
-}
-
-.mb-wrap p {
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
 }
 
-.mb-wrap blockquote {
-    margin: 20px 80px 0 80px;
-    padding-top: 150px;
+.bgimg-1, .bgimg-2, .bgimg-3 {
     position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.mb-style-2 blockquote:after {
-    content: "❞";
-    font-size: 70px;
+.bgimg-1 {
+    background-image: url("camera_hipster.jpg");
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("neighborhood_hipster.jpg");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("darthvader_hipster.jpg");
+    min-height: 400px;
+}
+
+.caption {
     position: absolute;
-    bottom: -70px;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
 }
 
-.mb-style-2 blockquote:before {
-    content: "❝";
-    font-size: 70px;
-    position: absolute;
-    left: -20px;
-    top: 100px;
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
 }
 
-.mb-style-2 blockquote p {
-    /*
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
-    box-shadow: 0 -6px 0 rgba(221, 221, 221, 0.8); 
-    color: rgba(68, 68, 68, 0.8);*/
-    display: inline;
-    font-family: Baskerville, Georgia, serif;
-    font-style: italic;
-    font-size: 28px;
-    line-height: 46px;
-    text-shadow: 0 1px 1px rgba(133, 23, 23, 0.5);
-}
-
-.mb-attribution {
-    text-align: right;
-    padding-right: 30px;
-}
-
-.mb-author {
-    /*
-    color: rgb(71, 71, 71);*/
-    font-size: 18px;
-    font-weight: bold;
-    padding-top: 10px;
+h3 {
+    letter-spacing: 5px;
     text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
 }
 
-blockquote {
-    border-left: none;
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
 }

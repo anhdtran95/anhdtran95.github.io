@@ -14,3 +14,9 @@ $(function(){
         }
     });
 });
+
+$("a[href*='#']").click(function() {
+    var scrollDiv = $(this).attr('href');
+    var os = $(scrollDiv).offset().top;
+    $('html, body').animate({scrollTop:os}, 'slow');
+});  
