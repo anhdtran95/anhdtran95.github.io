@@ -6,10 +6,10 @@ $(function(){
         // if you've scrolled further than the top of div1 plus it's height
         // change the color. either by adding a class or setting a css property
         if(scroll > os + ht){
-            $('a[href="#second_middle"]').addClass('current');
+            $('a[href="#previous_works"]').addClass('current');
             $('a[href="#about_me"]').removeClass('current');
         }else{
-            $('a[href="#second_middle"]').removeClass('current');
+            $('a[href="#previous_works"]').removeClass('current');
             $('a[href="#about_me"]').addClass('current');
         }
     });
