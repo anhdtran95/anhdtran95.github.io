@@ -292,3 +292,9 @@ h3 {
 }
 
 /*chevron thing */
+footer a{
+  color: rgb(221, 221, 221);
+}
+footer a:hover{
+  color: rgba(221, 221, 221, 0.5);
+}
