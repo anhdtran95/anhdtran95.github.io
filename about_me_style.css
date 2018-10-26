@@ -2,9 +2,8 @@
 
 body {
     /*font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;*/
-    background: linear-gradient( rgb(255, 94, 0), #bdf006) fixed;
+    /* background: linear-gradient( rgb(255, 94, 0), #bdf006) fixed;*/
 }
-
 
 /* navigation bar */
 
@@ -57,18 +56,102 @@ nav {
     font-size: 12px;
 }
 
-/*parallax effect*/ 
+/*dont call me gaga*/
+
+#contact_info {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#contact_info span {
+    flex: 0 0 33.333%;
+    max-width: 33.3333%;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#contact_info span i {
+    float: left;
+    font-size: 30px;
+}
+
+#contact_info span .right_area {
+    margin-left: 25px;
+    float: left;
+    color: rgb(63, 63, 63);
+}
+
+#contact_info_wrapper {
+    background: rgb(255, 255, 255);
+    margin-left: 7%;
+    margin-right: 7%;
+    border-radius: 7px;
+}
+
+#middle_box_container {
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    z-index: 2;
+}
+
+#middle_box{
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+}
+
+#middle_box ul{
+    padding: 0;
+    margin: 30px 0px;
+    list-style: none;
+}
+
+#profile_pic_container{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: -100px;
+    margin-bottom: -80px;
+}
+
+#profile_pic_container img{
+    width: 100%;
+}
+
+@media screen and (max-width:800px) {
+    #contact_info {
+        justify-content: space-between;
+    }
+    #contact_info span {
+        width: 100%;
+    }
+}
+
+/*parallax effect*/
 
 body, html {
     height: 100%;
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
+    color: rgb(63, 63, 63);
 }
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
     position: relative;
-    opacity: 0.65;
+    /*
+    opacity: 0.65;*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,10 +175,8 @@ body, html {
 
 .caption {
     position: absolute;
-    left: 0;
-    top: 50%;
+    top: 15%;
     width: 100%;
-    text-align: center;
     color: #000;
 }
 
