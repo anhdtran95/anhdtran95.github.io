@@ -58,6 +58,13 @@ nav {
 
 /*dont call me gaga*/
 
+#first_content_wrapper {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    color: #000;
+}
+
 #contact_info {
     padding: 15px;
     display: flex;
@@ -184,17 +191,23 @@ body, html {
 
 .caption {
     position: absolute;
-    top: 15%;
+    left: 0;
+    top: 40%;
     width: 100%;
+    text-align: center;
     color: #000;
 }
 
 .caption span.border {
-    background-color: #111;
+    background-color: rgba(43, 43, 43, 0.5);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 20px;
     color: #fff;
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
+    line-height: 70px;
 }
 
 h3 {
