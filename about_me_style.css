@@ -181,12 +181,12 @@ body, html {
 
 .bgimg-2 {
     background-image: url("neighborhood_hipster.jpg");
-    min-height: 400px;
+    min-height: 300px;
 }
 
 .bgimg-3 {
     background-image: url("darthvader_hipster.jpg");
-    min-height: 400px;
+    min-height: 300px;
 }
 
 .caption {
@@ -230,6 +230,7 @@ h3 {
 div[id*="work_exp"] {
     margin: 15px 0px;
     display: flex;
+    /* height: 60vh; */
 }
 
 .time_and_logo {
