@@ -225,6 +225,23 @@ h3 {
     }
 }
 
+/*past experiences*/
+
+div[id*="work_exp"] {
+    margin: 15px 0px;
+    display: flex;
+}
+
+.time_and_logo {
+    width: 30%;
+    float: left;
+}
+
+.time_and_logo img {
+    object-fit: cover;
+    object-position: center;
+}
+
 /*footer style*/
 
 footer p {
