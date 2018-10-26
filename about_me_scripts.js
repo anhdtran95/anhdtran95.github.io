@@ -12,16 +12,16 @@ $(function () {
             if (scroll > ex_me_os + ex_me_ht) {
                 // if not scroll past last sec
                 $('a[href="#experiences"]').removeClass('current');
-                $('a[href="#hobbies"]').addClass('current');
+                $('a[href="#related_links"]').addClass('current');
                 $('a[href="#about_me"]').removeClass('current');
             } else {
                 $('a[href="#experiences"]').addClass('current');
-                $('a[href="#hobbies"]').removeClass('current');
+                $('a[href="#related_links"]').removeClass('current');
                 $('a[href="#about_me"]').removeClass('current');
             }
         } else {
             $('a[href="#experiences"]').removeClass('current');
-            $('a[href="#hobbies"]').removeClass('current');
+            $('a[href="#related_links"]').removeClass('current');
             $('a[href="#about_me"]').addClass('current');
         }
     });
