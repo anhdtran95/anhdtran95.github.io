@@ -98,9 +98,9 @@ body, html {
 }
 
 .caption span.border {
-  background-color: rgba(43, 43, 43, 0.5);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  /* background-color: rgba(43, 43, 43, 0.5); */
+  /* -webkit-box-decoration-break: clone; */
+  /* box-decoration-break: clone; */
   padding: 0 20px;
   color: #fff;
   padding: 18px;
