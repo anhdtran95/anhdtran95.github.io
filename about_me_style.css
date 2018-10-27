@@ -230,17 +230,31 @@ h3 {
 div[id*="work_exp"] {
     margin: 15px 0px;
     display: flex;
+    flex-wrap: wrap;
     /* height: 60vh; */
 }
 
 .time_and_logo {
     width: 30%;
-    float: left;
 }
 
 .time_and_logo img {
     object-fit: cover;
     object-position: center;
+}
+
+.description {
+    width: 70%;
+}
+
+@media screen and (max-width:800px) {
+    .time_and_logo, .description{
+        width: 100%;
+    }
+
+    .time_and_logo{
+        margin-bottom: -25vh;
+    }
 }
 
 /*footer style*/
