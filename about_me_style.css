@@ -253,7 +253,7 @@ div[id*="work_exp"] {
     }
 
     .time_and_logo{
-        margin-bottom: -25vh;
+        margin-bottom: auto;
     }
 }
 
