@@ -251,10 +251,11 @@ div[id*="work_exp"] {
     .time_and_logo, .description{
         width: 100%;
     }
-
+    /*
     .time_and_logo{
         margin-bottom: auto;
     }
+    */
 }
 
 /*footer style*/
