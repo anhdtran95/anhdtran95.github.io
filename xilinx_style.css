@@ -1,0 +1,318 @@
+/*entire body*/
+
+body {
+  /*font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;*/
+  background: linear-gradient( rgb(255, 94, 0), #bdf006) fixed;
+}
+
+/* navigation bar */
+
+#nav_left {
+  float: left;
+}
+
+#nav_right {
+  float: right;
+}
+
+#nav_left .nav li {
+  float: left;
+}
+
+#nav_right .nav li {
+  float: right;
+}
+
+#nav_left a {
+  color: white;
+  text-shadow: 0 .2px .2px rgba(3, 3, 3, 0.726);
+  font-size: 16px;
+}
+
+#nav_right a:not(.current) {
+  color: rgb(99, 99, 99);
+  /* text-shadow: 0 .05px .05px rgba(3, 3, 3, 0.726); */
+  font-size: 12px;
+}
+
+.nav li:hover a {
+  background-color: transparent;
+  color: white;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.377);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.nav li a.current {
+  color: white;
+  font-size: 12px;
+}
+
+/*parallax effect*/
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-1 {
+  background-image: url("camera_hipster.jpg");
+  min-height: 400px;
+}
+
+.bgimg-2 {
+  background-image: url("neighborhood_hipster.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("darthvader_hipster.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: rgba(43, 43, 43, 0.5);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 20px;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  line-height: 70px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+.section {
+  color: #777;
+  background-color: white;
+  padding: 50px 80px;
+
+}
+#my_name {
+  color: rgb(31, 69, 139);
+  text-shadow: 0 1px 1px rgba(23, 133, 106, 0.5);
+  /* to prevent line break within my name */
+  white-space: nowrap;
+}
+
+#about_me, #previous_works {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*This is to fix the children height flowing out of parent*/
+
+#about_me:after, #previous_works:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+#first_left, #first_right {
+  width: 50%;
+  /* position: relative; */
+}
+
+#second_left, #second_right {
+  width: 38%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+  position: relative;
+}
+
+@media screen and (max-width:800px) {
+  #about_me, #previous_works {
+    justify-content: space-between;
+  }
+  #first_left, #second_right {
+    width: 100%;
+    order: 2;
+  }
+  #first_right, #second_left {
+    width: 100%;
+    order: 1;
+  }
+}
+
+#first_right {
+  text-align: center;
+}
+
+#previous_works img {
+  object-fit: cover;
+  object-position: center;
+}
+
+#previous_works img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.time_previous_work {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*chevron thing */
+
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #fff;
+  font: normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+
+.demo a:hover {
+  opacity: .5;
+}
+
+.demo a {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+}
+
+.demo a span {
+  position: absolute;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.demo a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+.demo a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .1);
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px rgba(255, 255, 255, .1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*chevron thing */
+
+/*footer style*/
+
+footer p{
+  margin: 0;
+}
+
+footer a {
+  color: rgb(221, 221, 221);
+}
+
+footer a:hover {
+  color: rgba(221, 221, 221, 0.5);
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="xilinx_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -32,69 +32,103 @@
 
     <div class="bgimg-1">
         <div class="caption">
-            <span class="border">Welcome, stranger!</span>
+            <span class="border">Xilinx PHP Interface</span>
         </div>
         <section class="demo">
             <a href="#about_me"><span></span></a>
         </section>
     </div>
 
-    <div style="color: #777;background-color:white;padding:50px 80px;">
-        <h3 style="text-align:center;">about me</h3>
-        <div id="about_me">
-
-            <div id="first_left">
-                <h1 style="font-size: 38px;">Hi, I'm <span id="my_name">Tran Duy Anh</span></h1>
-                <p style="font-size: 16px;">I am a final-year Electrical Engineering student. Eventhough not formally
-                    trained in UI/UX design, I
-                    grow quite fond of it.</p>
-                <p style="font-size: 16px;">My other hobbies include listening to music, working out and playing Dota
-                    2.</p>
-                <p style="font-size: 16px;"><a href="about_me.html">Discover me...</a></p>
-
-            </div>
-
-            <div id="first_right">
-
-                <img src="meepo_profile_pic.png" height="300" width="250" style="display: inline-block; margin: 10px 0px;">
-
-            </div>
+    <div id="problem_statement" class="section">
+        <h3 style="text-align:center;">Problem Statement</h3>
+        <div class="content">
+            <p>Design a web interface for the ATE Characterization Department to submit task requests.
+                As of now, the task requests are usually done by emails and hence hard to keep track.
+            </p>
 
         </div>
     </div>
 
 
-    <div class="bgimg-3">
+    <div class="bgimg-2">
         <div class="caption">
-            <span class="border">Scroll down to see my works</span>
+            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Scroll Down</span>
         </div>
-        <section class="demo">
-            <a href="#previous_works"><span></span></a>
-        </section>
     </div>
 
-
-
-    <div style="color: #777;background-color:white; padding:50px 80px;">
-        <h3 style="text-align:center;">previous works</h3>
-        <div id="previous_works">
-
-            <div id="second_left">
-                <a href="xilinx.html">
-                    <img src="xilinx.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
-                </a>
-                <p>Xilinx PHP Interface</p>
-                <p class="time_previous_work">Winter 2019</p>
-
+    <div class="section">
+        <div id="overview">
+            <h3 style="text-align:center;">Overview & Background</h3>
+            <div class="content">
+                <p>The ATE Characterization Department is in charge of testing Xilinx Intergrated Chips and see if they
+                    meet the standards laid out by their partnering companies.
+                </p>
+                <p> Units storages and testings need to be monitored in case of damage or lost. The current method of
+                    requesting tests through emails has proven insustainable and time-consuming.
+                </p>
             </div>
-            <div id="second_right">
-                <a href="continental.html">
-                    <img src="continental.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
-                </a>
-                <p>Continental Confluence Dashboard</p>
-                <p class="time_previous_work">Winter 2019</p>
-
+        </div>
+        <hr>
+        <div id="solution">
+            <h4 style="text-align:center;">Solution</h4>
+            <div class="content">
+                <p>A web interface that provides the team a tool 
+                    to keep track of task requests, store them in a MySQL database, and alert the respective 
+                    personel of the task details.
+                </p>
+                <p> Different functionalities include checking if units is currently lost or damaged, restricting 
+                    certain testing conditions with certain device families and certain readily filled out text 
+                    fields to cut down on the time spent on making these requests.
+                </p>
             </div>
+        </div>
+        <hr>
+        <div id="survey">
+            <h4 style="text-align:center;">Survey Analysis</h4>
+            <div class="content">
+                <p>Being an intern in the company for merely 2 weeks, I roughly had an idea of how the process of unit
+                    testing is done, from the requesting, procuring of different units, running the actual test and reporting
+                    test results. However, I would still need additional input from team members regarding the requesting procedures.
+                </p>
+                <p> I emailed my colleagues a 
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSenXA3OPTFd27FYYYyCyDdvZ6PaE_KjqiEI_mtD5QPd-Kx2Dw/viewform?usp=sf_link">
+                        google survey
+                    </a> that I created and received a total of 
+                    <a href="">
+                        14 responses 
+                    </a>
+                    along with some valuable insights:
+                </p>
+                <ul>
+                    <li> <b>Requesting tasks through emails is time-consuming: </b> An overwhelming 71.4% of my team members spend more than 10 minutes on requesting 1 task</li>
+                    <li> <b>There is an even distribution of </b> An overwhelming 85.7% of my team members find the current method difficult</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div id="user_flow">
+            <img>
+        </div>
+        <hr>
+        <div id="prototype">
+            <img>
+        </div>
+        <hr>
+        <div id="reflection">
+            <p>
+                
+            </p>
+        </div>
+        <hr>
+        <div id="tool_used">
+            <p>
+
+            </p>
+        </div>
+        <div id="continental_project">
+            <p>
+
+            </p>
         </div>
     </div>
 
