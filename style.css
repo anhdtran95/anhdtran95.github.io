@@ -151,7 +151,7 @@ h3 {
   /* position: relative; */
 }
 
-#second_left, #second_right {
+#second_left, #second_right, #third_right {
   width: 38%;
   height: 60vh;
   background-size: cover;
@@ -160,17 +160,20 @@ h3 {
   position: relative;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
   #about_me, #previous_works {
     justify-content: space-between;
   }
-  #first_left, #second_right {
+  #first_left {
     width: 100%;
     order: 2;
   }
-  #first_right, #second_left {
+  #first_right {
     width: 100%;
     order: 1;
+  }
+  #second_left, #second_right, #third_right{
+    width: 100%;
   }
 }
 
