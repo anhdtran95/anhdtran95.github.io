@@ -151,7 +151,7 @@ h3 {
   /* position: relative; */
 }
 
-#second_left, #second_right, #third_right {
+#second_left, #second_right, #third_left, #third_right {
   width: 38%;
   height: 60vh;
   background-size: cover;
@@ -172,7 +172,7 @@ h3 {
     width: 100%;
     order: 1;
   }
-  #second_left, #second_right, #third_right{
+  #second_left, #second_right, #third_left, #third_right{
     width: 100%;
   }
 }
