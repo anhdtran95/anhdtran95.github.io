@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="project_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Add maphilight plugin -->
+    <script type="text/javascript" src="jquery.maphilight.min.js"></script>
+    <script type="text/javascript" src="bootstrap-tooltip.js"></script>
 
     <link rel="icon" type="image/png" sizes="32x32" href="pepe.png">
 </head>
@@ -34,126 +39,226 @@
 
     <div class="bgimg-1">
         <div class="caption">
-            <span class="border">Interaction Design Project</span>
+            <span class="border">Interaction Design Module</span>
         </div>
         <section class="demo">
             <a href="#about_me"><span></span></a>
         </section>
     </div>
 
-    <div id="problem_statement" class="section">
-        <h3>Problem Statement</h3>
-        <div class="content">
-            <p>Re-design a gamifying-tasks mobile application because existing apps are not enough.
-            </p>
-
-        </div>
-    </div>
-
-
-    <div class="bgimg-2">
-        <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Scroll Down</span>
-        </div>
-    </div>
-
-    <div class="section">
-        <div id="overview">
-            <h3>Overview & Background</h3>
+    <div id="overallMargin">
+        <div id="problem_statement" class="section">
+            <h3>Problem Statement</h3>
             <div class="content">
-                <p>The ATE Characterization Department is in charge of testing Xilinx Intergrated Chips and see if they
-                    meet the standards laid out by their partnering companies.
+                <p>Design and implement an instant task-clearing feature in a task-gamifying mobile application.
                 </p>
-                <p> Units storages and testings need to be monitored in case of damage or lost. The current method of
-                    requesting tests through emails has proven insustainable and time-consuming.
-                </p>
+
             </div>
-        </div>
-        <hr>
-        <div id="solution">
-            <h4 style="text-align:center;">Solution</h4>
-            <div class="content">
-                <p>A web interface that provides the team a tool
-                    to keep track of task requests, store them in a MySQL database, and alert the respective
-                    personel of the task details.
-                </p>
-                <p> Different functionalities include checking if units is currently lost or damaged, restricting
-                    certain testing conditions with certain device families and certain readily filled out text
-                    fields to cut down on the time spent on making these requests.
-                </p>
+            <br>
+            <hr>
+            <div id="overview">
+                <h3>Overview & Background</h3>
+                <div class="content">
+                    <p>Students' lives are hectic and difficult to manage at times.
+                        It is, therefore, important for students to keep track of their lives with a checklists and
+                        reminder system. How do we combine list-checking with fun and convenience in a package?
+                    </p>
+                </div>
             </div>
-        </div>
-        <hr>
-        <div id="survey">
-            <h3>Survey Analysis</h3>
-            <div class="content">
-                <p>Being an intern in the company for merely 2 weeks, I roughly had an idea of how the process of unit
-                    testing is done, from the requesting, procuring of different units, running the actual test and
-                    reporting
-                    test results. However, I would still need additional input from team members regarding the
-                    requesting procedures.
+            <br>
+            <hr>
+            <div id="solution">
+                <h3>Solution</h3>
+                <div class="content">
+                    <p> As part of our CS3240 Interaction Design project, we chose to design a mobile platform to
+                        gamify tasks for NUS students.
+                    </p>
+                    <p>Gamifying tasks offers not only a solution but also a fun and interactive method to deal with
+                        stress.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div id="benchmark">
+                <h3>Competitive Benchmark</h3>
+                <h4>Analyzing current task-gamifying applications</h4>
+                <p>
+                    The idea behind gamifying tasks has been around for quite some time. It is, therefore, neccessary
+                    to understand the design of similar competitors. "Habitica" stands out immediately after a quick
+                    google play search.
                 </p>
-                <p> I emailed my colleagues a
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSenXA3OPTFd27FYYYyCyDdvZ6PaE_KjqiEI_mtD5QPd-Kx2Dw/viewform?usp=sf_link">
-                        google survey
-                    </a> that I created and received a total of
-                    <a href="">
-                        14 responses
+                <div class="content">
+                    <a href="https://play.google.com/store/apps/details?id=com.habitrpg.android.habitica&hl=en">
+                        <h5>Habitica: Gamify Your Tasks</h5>
                     </a>
-                    along with some valuable insights:
+                    <div class="img_container_wrap">
+                        <div class="img_container">
+                            <div class="img">
+                                <img src="habitica_1.webp">
+                                <p> Different types of tasks include: habits, daily and to-dos</p>
+                            </div>
+                            <div class="img">
+                                <img src="habitica_2.webp">
+                                <p> Plus and minus buttons to add and subtract tasks accordingly</p>
+                            </div>
+                            <div class="img">
+                                <img src="habitica_3.webp">
+                                <p> Attractive quests to motivate users to complete tasks</p>
+                            </div>
+                            <div class="img">
+                                <img src="habitica_4.webp">
+                                <p> List of tasks and rewards for full display of information</p>
+                            </div>
+                            <div class="img">
+                                <img src="habitica_5.webp">
+                                <p> Notification when gaining a level as a from of feedback</p>
+                            </div>
+                            <div class="img">
+                                <img src="habitica_6.webp">
+                                <p> Social features like party is included to increase user base</p>
+                            </div>
+                            <div class="img">
+                                <img src="habitica_7.webp">
+                                <p> An user feed to share and post contents and messages</p>
+                            </div>
+                            <div class="img">
+                                <img src="habitica_8.webp">
+                                <p> Rich character customizations makes users more engaged</p>
+                            </div>
+                        </div>
+                        <a href="#" class="previous"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div id="brainstorm">
+                <h3>Brainstorming & Ideation</h3>
+                <div class="content">
+                    <p>The main user group for this project is the student body of National University of Singapore
+                        (NUS), and therefore we structure our design based on the curriculumn of NUS. To get user
+                        input, we created a
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfN8CkbemSz88ZQZzKVxiS1NV80OLbix-ngSUSU0OMcN_arig/viewform">survey</a>
+                        and gathered
+                        <a href="">16 resonses</a>
+                        along with some valueable insights:
+                        <ul>
+                            <li><b>More than half have difficulties keeping tracks of homeworks & assignments:</b>
+                                56.3% of students indicated > 7 on the scale of 0-10 with 10 being the most
+                                difficulties.</li>
+                            <li><b>There are two many assignments to keep track of:</b> Out of 16 resonses, "too many
+                                assignments" is the most common problem faced by students.</li>
+                            <li><b>There is no one-stop solution for this problem:</b> Students use a variety of tools
+                                like making their own post-it or <a href="https://www.google.com/keep/">Google Keep</a>
+                            </li>
+                            <li><b>Gamifying tasks is fun:</b> An overwhelming 75% of students expressed their supports
+                                for such application and think that it would motivate them.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        After going through user-input and consulting with our professor, each of us carry on with
+                        different
+                        aspects of the project. For my part especially, I focus on the instant task-clearing feature. I
+                        figure that this feature is useful since most students would like to clear a currently queued
+                        task only with one action.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div id="user_flow">
+                <h3>User Flow and prototypes</h3>
+                <div id="modalContainer">
+
+                    <div id="modalContainerLayer" style="height: 70vh;">
+                        <img src="nus_mainpage.png">
+                        <!-- Trigger/Open The Modal -->
+                        <button id="modalButt">Interact</button>
+                    </div>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal" style="padding-top: 65px;">
+
+                        <!-- Modal content -->
+                        <div class="modal-content" style="width: 30%;">
+                            <span class="close">&times;</span>
+                            <h4 id="imgTitle">Landing Page Prototype</h4>
+                            <img src="nus_mainpage.png" usemap="#screen1" class="proto proto1">
+                            <map name="screen1">
+                                <area id="tooltipAreaH" shape="rect" coords="160, 45, 205, 60" href="#" onclick="nextScr(2); h(2); return false;"
+                                    data-toggle="tooltip" data-placement="left" title="Click here to get started!">
+                            </map>
+                            <img src="nus_fight.png" usemap="#screen2" class="proto proto2" style="display: none;">
+                            <map name="screen2">
+                                <area shape="rect" coords="57, 250, 105, 270" href="#" onclick="nextScr(1); h(1); return false;">
+                                <area shape="rect" coords="130, 250, 178, 270" href="#" onclick="nextScr(3); h(3); return false;">
+                            </map>
+                            <img src="nus_fight_done.png" usemap="#screen3" class="proto proto3" style="display: none;">
+                            <map name="screen3">
+                                <area id="tooltipAreaH1" shape="rect" coords="21, 260, 212, 297" href="#" onclick="nextScr(4); h(4); return false;"
+                                    data-toggle="tooltip" title="Select this task!">
+                            </map>
+                            <img src="nus_set.png" usemap="#screen4" class="proto proto4" style="display: none;">
+                            <map name="screen4">
+                                <area shape="rect" coords="57, 250, 105, 270" href="#" onclick="nextScr(3); h(3); return false;">
+                                <area shape="rect" coords="130, 250, 178, 270" href="#" onclick="nextScr(5); h(5); return false;">
+                            </map>
+                            <img src="nus_set_done.png" class="proto proto5">
+                            <a href="#" onclick="nextScr(1); h(1); return false;" title="Click to replay!" data-toggle="tooltip"
+                                id="redo_butt"><i class="fas fa-redo"></i></a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- END MODAL HERE-->
+
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div id="reflection">
+                <h3>reflection</h3>
+                <p>
+                    This project is my first step into the interactive design field. Along with the project,
+                    CS3240 also taought me various design principles and heuristics evaluation criteria to assess
+                    whether a design is intuitive and user-friendly. I also liked the process behind drawing user flow
+                    and creating prototypes using Balsamiq. Overall, CS3240 was a great module and this was a great
+                    project :).
                 </p>
+            </div>
+            <br>
+            <hr>
+            <div id="tool_used">
+                <h3>Tools used</h3>
                 <ul>
-                    <li> <b>Requesting tasks through emails is time-consuming: </b> An overwhelming 71.4% of my team
-                        members spend more than 10 minutes on requesting 1 task</li>
-                    <li> <b>There is an even distribution of </b> An overwhelming 85.7% of my team members find the
-                        current method difficult</li>
+                    <li> Balsamiq </li>
                 </ul>
             </div>
-        </div>
-        <hr>
-        <div id="user_flow">
-            <h3>User flow</h3>
-            <img>
-        </div>
-        <hr>
-        <div id="prototype">
-            <h3>prototypes</h3>
-            <img>
-        </div>
-        <hr>
-        <div id="reflection">
-            <h3>Reflection</h3>
-            <p>
+            <br>
+            <hr>
+            <h3>Other works</h3>
+            <div id="other_projects">
+                <div id="first_left">
+                    <a href="xilinx.html">
+                        <img src="xilinx.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
+                    </a>
+                    <p>Xilinx PHP Interface</p>
+                    <p class="time_previous_work">Winter 2019</p>
 
-            </p>
-        </div>
-        <hr>
-        <div id="tool_used">
-            <h3>Tool used</h3>
-            <p>
+                </div>
+                <div id="first_right">
+                    <a href="continental.html">
+                        <img src="continental.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
+                    </a>
+                    <p>Continental Confluence Dashboard</p>
+                    <p class="time_previous_work">Winter 2019</p>
 
-            </p>
-        </div>
-        <hr>
-        <h3>Other works</h3>
-        <div id="other_projects">
-            <div id="first_left">
-                <a href="continental.html">
-                    <img src="continental.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
-                </a>
-                <p>Xilinx PHP Interface</p>
-                <p class="time_previous_work">Winter 2019</p>
+                </div>
 
             </div>
-            <div id="first_right">
-                <a href="xilinx.html">
-                    <img src="xilinx.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
-                </a>
-                <p>NUS CS3240 Interaction Design Project</p>
-                <p class="time_previous_work">Winter 2019</p>
-
-            </div>
-
         </div>
     </div>
 

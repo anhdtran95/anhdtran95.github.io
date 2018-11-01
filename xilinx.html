@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Add maphilight plugin -->
     <script type="text/javascript" src="jquery.maphilight.min.js"></script>
+    <script type="text/javascript" src="bootstrap-tooltip.js"></script>
 
     <link rel="icon" type="image/png" sizes="32x32" href="pepe.png">
 </head>
@@ -42,7 +43,7 @@
             <a href="#about_me"><span></span></a>
         </section>
     </div>
-    <div style="margin: 0px 55px;">
+    <div id="overallMargin">
         <div id="problem_statement" class="section">
             <h3>Problem Statement</h3>
             <div class="content">
@@ -51,20 +52,20 @@
                 </p>
 
             </div>
-            <br><hr>
+            <br>
+            <hr>
             <div id="overview">
                 <h3>Overview & Background</h3>
                 <div class="content">
-                    <p>The ATE Characterization Department is in charge of testing Xilinx Intergrated Chips and see if
-                        they
-                        meet the standards laid out by their partnering companies.
+                    <p>The ATE Characterization Department is in charge of testing Xilinx intergrated chips and see if
+                        they meet the standards laid out by their partnering companies.
                     </p>
                     <p> Units storages and testings need to be monitored in case of damage or lost. The current method
-                        of
-                        requesting tests through emails has proven insustainable and time-consuming.
+                        of requesting tests through emails has proven insustainable and time-consuming.
                     </p>
                 </div>
-                <br><hr>
+                <br>
+                <hr>
             </div>
 
             <div id="solution">
@@ -80,7 +81,8 @@
                     </p>
                 </div>
             </div>
-            <br><hr>
+            <br>
+            <hr>
             <div id="survey">
                 <h3>Survey Analysis</h3>
                 <div class="content">
@@ -110,45 +112,69 @@
                     </ul>
                 </div>
             </div>
-            <br><hr>
+            <br>
+            <hr>
 
             <div id="user_flow">
                 <h3>User flow</h3>
                 <div class="content" style="text-align: center;">
-                    <img src="xilinx_user_flow.png">
+                    <img src="xilinx_user_flow.png" width="100%">
                 </div>
             </div>
-            <br><hr>
+            <br>
+            <hr>
             <div id="prototype">
                 <h3>prototypes</h3>
-                <div class="content" style="margin: 20px 0px;">
+                <div id="modalContainer">
 
-                    <h4 id="imgTitle">Landing Page Prototype</h4>
-                    <img src="xilinx_first_screen.png" usemap="#screen1" class="proto proto1">
-                    <map name="screen1">
-                        <area shape="rect" coords="16, 72, 124, 103" href="#" onclick="nextScr(2); return false;">
-                    </map>
-                    <img src="xilinx_new_task.png" usemap="#screen2" class="proto proto2" style="display: none;">
-                    <map name="screen2">
-                        <area shape="rect" coords="29, 322, 95, 349" href="#" onclick="nextScr(3); return false;">
-                        <area shape="rect" coords="466, 49, 620, 81" href="#" onclick="nextScr(1); return false;">
-                        <area shape="rect" coords="23, 45, 130, 72" href="#" onclick="nextScr(4); return false;">
-                    </map>
-                    <img src="xilinx_success.png" usemap="#screen3" class="proto proto3" style="display: none;">
-                    <map name="screen3">
-                        <area shape="rect" coords="48, 286, 130, 313" href="#" onclick="nextScr(2); return false;">
-                        <area shape="rect" coords="158, 286, 334, 313" href="#" onclick="nextScr(2); return false;">
-                        <area shape="rect" coords="365, 286, 423, 313" href="#" onclick="nextScr(1); return false;">
-                    </map>
-                    <img src="xilinx_selectDev.png" usemap="#screen4" class="proto proto4" style="display: none;">
-                    <map name="screen4">
-                        <area shape="rect" coords="290, 258, 350, 285" href="#" onclick="nextScr(2); return false;">
-                    </map>
-                    <p style="margin: 10px 0px; font-size: 11px;">Due to confidentiality issue, I am unable to provide
-                        the final product :(</p>
+
+                    <div id="modalContainerLayer">
+                        <img src="xilinx_first_screen.png">
+                        <!-- Trigger/Open The Modal -->
+                        <button id="modalButt">Interact</button>
+                    </div>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal" style="padding-top: 100px;">
+
+                        <!-- Modal content -->
+                        <div class="modal-content" style="width: 64%;">
+                            <span class="close">&times;</span>
+                            <h4 id="imgTitle">Landing Page Prototype</h4>
+                            <img src="xilinx_first_screen.png" usemap="#screen1" class="proto proto1">
+                            <map name="screen1">
+                                <area id="tooltipAreaX" shape="rect" coords="16, 72, 124, 103" href="#" onclick="nextScr(2); x(2); return false;"
+                                    data-toggle="tooltip" data-placement="right" title="Click here to get started!">
+                            </map>
+                            <img src="xilinx_new_task.png" usemap="#screen2" class="proto proto2" style="display: none;">
+                            <map name="screen2">
+                                <area shape="rect" coords="29, 322, 95, 349" href="#" onclick="nextScr(3); x(3); return false;">
+                                <area shape="rect" coords="466, 49, 620, 81" href="#" onclick="nextScr(1); x(1); return false;">
+                                <area shape="rect" coords="23, 45, 130, 72" href="#" onclick="nextScr(4); x(4); return false;">
+                            </map>
+                            <img src="xilinx_success.png" usemap="#screen3" class="proto proto3" style="display: none;">
+                            <map name="screen3">
+                                <area shape="rect" coords="48, 286, 130, 313" href="#" onclick="nextScr(2); x(2); return false;">
+                                <area shape="rect" coords="158, 286, 334, 313" href="#" onclick="nextScr(2); x(2); return false;">
+                                <area shape="rect" coords="365, 286, 423, 313" href="#" onclick="nextScr(1); x(1); return false;">
+                            </map>
+                            <img src="xilinx_selectDev.png" usemap="#screen4" class="proto proto4" style="display: none;">
+                            <map name="screen4">
+                                <area shape="rect" coords="290, 258, 350, 285" href="#" onclick="nextScr(2); x(2); return false;">
+                            </map>
+
+                        </div>
+
+                    </div>
+
+                    <!-- END MODAL HERE-->
+
                 </div>
+                <p style="margin: 10px 0px; font-size: 11px;">Due to confidentiality issue, I am unable to provide
+                    the final product :(</p>
             </div>
-            <br><hr>
+            <br>
+            <hr>
             <div id="reflection">
                 <h3>Reflection</h3>
                 <p>
@@ -159,7 +185,8 @@
                     my internship at Xilinx.
                 </p>
             </div>
-            <br><hr>
+            <br>
+            <hr>
             <div id="tool_used">
                 <h3>Tool used</h3>
                 <ul>
@@ -168,14 +195,15 @@
                     <li> Css</li>
                 </ul>
             </div>
-            <br><hr>
+            <br>
+            <hr>
             <h3>Other works</h3>
             <div id="other_projects">
                 <div id="first_left">
                     <a href="continental.html">
                         <img src="continental.jpg" height="60%" width="100%" style="margin: 10px 0px;">
                     </a>
-                    <p>Xilinx PHP Interface</p>
+                    <p>Continental Confluence Dashboard</p>
                     <p class="time_previous_work">Winter 2019</p>
 
                 </div>

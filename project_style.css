@@ -1,14 +1,25 @@
 /*entire body*/
 
-
+/*
 @font-face {
   font-family: 'Google_Sans';
-  src: local('Product Sans Regular.ttf') format('truetype');
+  src: url('Product Sans Regular.ttf') format('truetype');
+}*/
+
+@font-face {
+  font-family: Family-Name;
+  src: url("Family-Name.eot");
 }
 
 body {
-  font-family: 'Google_Sans';
+  font-family: 'Google_Sans', sans-serif;
   /*background: linear-gradient( rgb(255, 94, 0), #bdf006) fixed; */
+}
+
+/* color a tag with href */
+
+a {
+  color: inherit;
 }
 
 /* navigation bar */
@@ -122,6 +133,202 @@ h3 {
   color: #111;
 }
 
+#overallMargin {
+  margin: 0px 5vw;
+}
+
+/* habitica images */
+
+.img_container_wrap {
+  margin: 20px 0px;
+  position: relative;
+}
+
+a.previous, a.next {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  color: #fff !important;
+  z-index: 999;
+  font-size: 14px;
+  line-height: 40px;
+  margin-top: -30px;
+  background-color: rgba(0, 0, 0, .12);
+  display: inline-block;
+  padding: 10px;
+  transition: all 200ms cubic-bezier(.25, .46, .45, .94);
+  font-size: 40px;
+}
+
+a.previous:hover, a.next:hover{
+  background-color: rgba(0, 0, 0, 0.541);
+}
+a.next {
+  right: 0px;
+}
+
+.img_container {
+  overflow: auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.img {
+  display: inline-block;
+  margin: 0px 3vw;
+  width: 30%;
+  text-align: center;
+}
+
+.img>img {
+  width: 100%;
+}
+
+.img>p{
+  white-space: normal;
+}
+
+/*area style for tooltip*/
+
+#tooltipAreaX {
+  position: absolute;
+  left: 30px;
+  width: 120px;
+  top: 145px;
+}
+
+#tooltipAreaH {
+  position: absolute;
+  left: 170px;
+  width: 45px;
+  top: 110px;
+}
+
+#tooltipAreaH1 {
+  position: absolute;
+  left: 40px;
+  width: 200px;
+  top: 300px;
+}
+
+.proto5 {
+  opacity: 0.5;
+  display: none;
+  position: relative;
+}
+
+#redo_butt {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 32px;
+}
+
+/* MODAL STYLING XD*/
+
+/* modal button */
+
+#modalContainer {
+  margin: 20px 0px;
+}
+
+#modalContainer img {
+  opacity: 0.5;
+  object-fit: contain;
+  object-position: center;
+}
+
+#modalContainerLayer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 3px 3px 1000px 0 #000000;
+  border-radius: 2px;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#modalButt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(51, 51, 51);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#modalButt:enabled:hover {
+  background-color: rgb(99, 99, 99);
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  /* padding-top: 50px; */
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  text-align: center;
+}
+
+.modal-content img {
+  max-height: 75vh;
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*MODAL STYLING END HERE*/
 
 /* Turn off parallax scrolling for tablets and phones */
 
@@ -136,9 +343,11 @@ h3 {
   /* background-color: rgba(228, 228, 228, 0.644); */
   padding: 50px 80px;
 }
+
 hr {
   border-top: 1px solid rgb(177, 177, 177);
 }
+
 #other_projects {
   display: flex;
   align-items: center;
@@ -147,7 +356,7 @@ hr {
 }
 
 #first_left, #first_right {
-  width: 38%;
+  width: 43%;
   height: 60vh;
   margin: 20px;
   position: relative;
