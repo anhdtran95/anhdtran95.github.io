@@ -78,17 +78,17 @@ body, html {
 }
 
 .bgimg-1 {
-  background-image: url("camera_hipster.jpg");
+  background-image: url("images/camera_hipster.jpg");
   min-height: 100%;
 }
 
 .bgimg-2 {
-  background-image: url("neighborhood_hipster.jpg");
+  background-image: url("images/neighborhood_hipster.jpg");
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url("darthvader_hipster.jpg");
+  background-image: url("images/darthvader_hipster.jpg");
   min-height: 400px;
 }
 

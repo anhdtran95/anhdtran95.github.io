@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Google_Sans';
-  src: url('Product Sans Regular.ttf') format('truetype');
+  src: url('fonts/Product Sans Regular.ttf') format('truetype');
 }
 
 /* color a tag with href */
@@ -41,7 +41,7 @@ a {
 body, html {
   height: 100%;
   margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
+  font: 400 15px/1.8 "Open Sans", sans-serif;
 }
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -53,7 +53,7 @@ body, html {
 }
 
 .bgimg-1 {
-  background-image: url("camera_hipster.jpg");
+  background-image: url("images/camera_hipster.jpg");
   min-height: 400px;
 }
 
