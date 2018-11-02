@@ -13,7 +13,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Add maphilight plugin -->
     <script type="text/javascript" src="jquery.maphilight.min.js"></script>
-    <script type="text/javascript" src="bootstrap-tooltip.js"></script>
 
     <link rel="icon" type="image/png" sizes="32x32" href="pepe.png">
 </head>
@@ -21,17 +20,26 @@
 <body>
 
     <header>
-        <nav>
-            <div id="nav_left">
-                <ul class="nav">
-                    <li><a href="https://anhdtran95.github.io"><b>Tran Duy Anh</b></a></li>
-                </ul>
-            </div>
-
-            <div id="nav_right">
-                <ul class="nav">
-                    <li><a href="#previous_works"><b>Previous Works</b></a></li>
-                    <li><a href="#about_me" class="current"><b>About Me</b></a></li>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="https://anhdtran95.github.io"><b>Tran Duy Anh</b></a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Navigation Menu
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#problem_statement">Problem Statement</a></li>
+                            <li><a href="#overview">Overview & Background</a></li>
+                            <li><a href="#solution">Solution</a></li>
+                            <li><a href="#benchmark">Competitive Benchmark</a></li>
+                            <li><a href="#survey">Survey Analysis</a></li>
+                            <li><a href="#user_flow">User Flow & Prototypes</a></li>
+                            <li><a href="#reflection">Reflection</a></li>
+                            <li><a href="#tool_used">Tool Used</a></li>
+                            <li><a href="#other_projects">Other Works</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -39,7 +47,7 @@
 
     <div class="bgimg-1">
         <div class="caption">
-            <span class="border">Interaction Design Module</span>
+            <span class="border">Interaction Design Project</span>
         </div>
         <section class="demo">
             <a href="#about_me"><span></span></a>
@@ -47,12 +55,14 @@
     </div>
 
     <div id="overallMargin">
-        <div id="problem_statement" class="section">
-            <h3>Problem Statement</h3>
-            <div class="content">
-                <p>Design and implement an instant task-clearing feature in a task-gamifying mobile application.
-                </p>
+        <div class="section">
+            <div id="problem_statement">
+                <h3>Problem Statement</h3>
+                <div class="content">
+                    <p>Design and implement an instant task-clearing feature in a task-gamifying mobile application.
+                    </p>
 
+                </div>
             </div>
             <br>
             <hr>
@@ -134,8 +144,8 @@
             </div>
             <br>
             <hr>
-            <div id="brainstorm">
-                <h3>Brainstorming & Ideation</h3>
+            <div id="survey">
+                <h3>Survey Analysis</h3>
                 <div class="content">
                     <p>The main user group for this project is the student body of National University of Singapore
                         (NUS), and therefore we structure our design based on the curriculumn of NUS. To get user
@@ -175,7 +185,7 @@
                     <div id="modalContainerLayer" style="height: 70vh;">
                         <img src="nus_mainpage.png">
                         <!-- Trigger/Open The Modal -->
-                        <button id="modalButt">Interact</button>
+                        <div id="modalButt" data-toggle="tooltip" data-placement="top" title="Click to interact!"></div>
                     </div>
 
                     <!-- The Modal -->

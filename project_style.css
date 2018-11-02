@@ -1,19 +1,8 @@
 /*entire body*/
 
-/*
 @font-face {
   font-family: 'Google_Sans';
   src: url('Product Sans Regular.ttf') format('truetype');
-}*/
-
-@font-face {
-  font-family: Family-Name;
-  src: url("Family-Name.eot");
-}
-
-body {
-  font-family: 'Google_Sans', sans-serif;
-  /*background: linear-gradient( rgb(255, 94, 0), #bdf006) fixed; */
 }
 
 /* color a tag with href */
@@ -23,55 +12,29 @@ a {
 }
 
 /* navigation bar */
-
-#nav_left {
-  float: left;
+.navbar-inverse{
+  background-color: rgba(0, 0, 0, 0.527);
+  border: none;
 }
 
-#nav_right {
-  float: right;
-}
-
-#nav_left .nav li {
-  float: left;
-}
-
-#nav_right .nav li {
-  float: right;
-}
-
-#nav_left a {
-  color: white;
-  text-shadow: 0 .2px .2px rgba(3, 3, 3, 0.726);
+.navbar-inverse
+.navbar-brand{
   font-size: 16px;
-}
-
-#nav_right a:not(.current) {
-  color: rgb(99, 99, 99);
-  /* text-shadow: 0 .05px .05px rgba(3, 3, 3, 0.726); */
-  font-size: 12px;
-}
-
-.nav li:hover a {
-  background-color: transparent;
   color: white;
 }
 
-nav {
-  background: rgba(0, 0, 0, 0.377);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
+.navbar-inverse
+.navbar-brand:hover{
+  color: rgb(201, 201, 201);
 }
 
-.nav li a.current {
+.navbar-inverse .navbar-nav>li>a{
   color: white;
-  font-size: 12px;
 }
+.navbar-inverse .navbar-nav>li>a:hover{
+  color: rgb(201, 201, 201);
+}
+
 
 /*parallax effect*/
 
@@ -83,7 +46,6 @@ body, html {
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
-  opacity: 0.65;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,16 +54,6 @@ body, html {
 
 .bgimg-1 {
   background-image: url("camera_hipster.jpg");
-  min-height: 400px;
-}
-
-.bgimg-2 {
-  background-image: url("neighborhood_hipster.jpg");
-  min-height: 400px;
-}
-
-.bgimg-3 {
-  background-image: url("darthvader_hipster.jpg");
   min-height: 400px;
 }
 
@@ -127,9 +79,9 @@ body, html {
 }
 
 h3 {
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
+  font: 30px 'Google_Sans', sans-serif !important;
   color: #111;
 }
 
@@ -160,9 +112,10 @@ a.previous, a.next {
   font-size: 40px;
 }
 
-a.previous:hover, a.next:hover{
+a.previous:hover, a.next:hover {
   background-color: rgba(0, 0, 0, 0.541);
 }
+
 a.next {
   right: 0px;
 }
@@ -184,8 +137,20 @@ a.next {
   width: 100%;
 }
 
-.img>p{
+.img>p {
   white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px;
+  /* fallback */
+  max-height: 32px;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 /*area style for tooltip*/
@@ -229,49 +194,89 @@ a.next {
 
 /* MODAL STYLING XD*/
 
-/* modal button */
-
 #modalContainer {
   margin: 20px 0px;
 }
 
-#modalContainer img {
+#modalContainerLayer img {
   opacity: 0.5;
+  height: 100%;
+  /*
   object-fit: contain;
   object-position: center;
+  box-shadow: inset 3px 3px 1000px 0 #000000;
+  */
 }
 
 #modalContainerLayer {
   position: relative;
   width: 100%;
   height: 100%;
-  box-shadow: inset 3px 3px 1000px 0 #000000;
   border-radius: 2px;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
-#modalButt {
+#widerBrowser{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: rgb(51, 51, 51);
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
+  font-size: 30px;
+  display: none;
 }
 
-#modalButt:enabled:hover {
-  background-color: rgb(99, 99, 99);
+/* modal button */
+
+#modalButt {
+  background: steelblue;
+  border-radius: 50% / 10%;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  /* change this to change size */
+  height: 3em;
+  margin: 20px auto;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  text-indent: 0.1em;
+  transition: all 150ms ease-out;
+  width: 4em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+#modalButt:hover {
+  background: rgb(44, 81, 110);
+  cursor: pointer;
+}
+
+#modalButt::before {
+  background: inherit;
+  border-radius: 5% / 50%;
+  bottom: 9%;
+  content: "";
+  left: -5%;
+  position: absolute;
+  right: -5%;
+  top: 9%;
+}
+
+#modalButt::after {
+  border-style: solid;
+  border-width: 1em 0 1em 1.732em;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
+  content: ' ';
+  font-size: 0.75em;
+  height: 0;
+  margin: -1em 0 0 -0.75em;
+  top: 50%;
+  position: absolute;
+  width: 0;
 }
 
 /* The Modal (background) */

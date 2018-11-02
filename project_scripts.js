@@ -1,8 +1,8 @@
 $(function () {
     // disable modal button on mobile
     if ($(window).width() < 900) {
-        $("#modalButt").prop("disabled", true);
-        $("#modalButt").text("Use a wider browser to load");
+        $("#modalButt").hide();
+        $("#widerBrowser").show();
     }
 
     $('[data-toggle="tooltip"]').tooltip();

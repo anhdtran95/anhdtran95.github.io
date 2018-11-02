@@ -29,6 +29,10 @@ body {
     font-size: 16px;
 }
 
+#nav_left a:hover {
+    color: rgb(201, 201, 201);
+}
+
 #nav_right a:not(.current) {
     color: rgb(99, 99, 99);
     /* text-shadow: 0 .05px .05px rgba(3, 3, 3, 0.726); */
@@ -41,7 +45,7 @@ body {
 }
 
 nav {
-    background: rgba(0, 0, 0, 0.377);
+    background: rgba(0, 0, 0, 0.527);
     position: fixed;
     top: 0;
     width: 100%;
@@ -166,8 +170,6 @@ body, html {
 
 .bgimg-1, .bgimg-2, .bgimg-3 {
     position: relative;
-    /*
-    opacity: 0.65;*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,7 +250,7 @@ div[id*="work_exp"] {
 }
 
 @media screen and (max-width:800px) {
-    .time_and_logo, .description{
+    .time_and_logo, .description {
         width: 100%;
     }
     /*
