@@ -5,6 +5,10 @@
     src: url('fonts/Product Sans Regular.ttf') format('truetype');
 }
 
+a, a:hover {
+    color: inherit;
+}
+
 /* navigation bar */
 
 #nav_left {
@@ -159,6 +163,89 @@ nav {
     }
 }
 
+/*block quote*/
+
+.main {
+    position: relative;
+    display: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+.mb-wrap {
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    /*width: 300px;*/
+}
+
+.mb-wrap p {
+    margin: 0;
+    padding: 0;
+}
+
+.mb-wrap blockquote {
+    margin: 20px 80px 0 80px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.mb-style-2 blockquote:after {
+    content: "❞";
+    font-size: 70px;
+    position: absolute;
+    bottom: -70px;
+}
+
+.mb-style-2 blockquote:before {
+    content: "❝";
+    font-size: 70px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+.mb-style-2 blockquote p {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5);
+    /* box-shadow: 0 -6px 0 rgba(221, 221, 221, 0.8); */
+    color: black;
+    display: inline;
+    font-family: Baskerville, Georgia, serif;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 46px;
+    text-shadow: 0 1px 1px rgba(133, 23, 23, 0.5);
+}
+
+.mb-attribution {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.mb-author {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+    text-transform: uppercase;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    display:inline;
+    /* box-shadow: -16px 0 0 rgba(255, 255, 255, 0.5); */
+}
+
+blockquote {
+    border-left: none;
+}
+
+/* end blockquote */
+
 /*parallax effect*/
 
 body, html {
@@ -212,10 +299,11 @@ body, html {
     line-height: 70px;
 }
 
-h1{
+h1 {
     font-family: 'Google_Sans', sans-serif !important;
     color: #111;
 }
+
 h3 {
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -262,6 +350,18 @@ div[id*="work_exp"] {
         margin-bottom: auto;
     }
     */
+}
+
+/*button dark*/
+
+.btn-dark{
+    color: white;
+    background: rgb(46, 46, 46);
+}
+
+.btn-dark:hover{
+    color: white;
+    background: black;
 }
 
 /*footer style*/

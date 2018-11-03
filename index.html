@@ -27,6 +27,7 @@
 
             <div id="nav_right">
                 <ul class="nav">
+                    <li><a href="#case_studies">Case Studies</a></li>
                     <li><a href="#previous_works">Portfolio</a></li>
                     <li><a href="#about_me" class="current">About Me</a></li>
                 </ul>
@@ -45,20 +46,19 @@
 
     <div style="color: #777;background-color:white;padding:50px 80px;">
         <h3 style="text-align:center;">about me</h3>
-        <div id="about_me">
+        <div id="about_me" class="flexCon">
 
-            <div id="first_left">
+            <div id="first_left" class="flexEle left">
                 <h1 style="font-size: 38px;">Hi, I'm <span id="my_name">Tran Duy Anh</span></h1>
                 <p style="font-size: 16px;">I am a final-year Electrical Engineering student. Eventhough not formally
                     trained in UI/UX design, I
                     grow quite fond of it.</p>
-                <p style="font-size: 16px;">My other hobbies include listening to music, working out and playing Dota
-                    2.</p>
+
                 <p style="font-size: 16px;"><a href="about_me.html">Discover me...</a></p>
 
             </div>
 
-            <div id="first_right">
+            <div id="first_right" class="flexEle right">
 
                 <img src="css/images/meepo_profile_pic.png" height="300" width="250" style="display: inline-block; margin: 10px 0px;">
 
@@ -68,7 +68,7 @@
     </div>
 
 
-    <div class="bgimg-3">
+    <div class="bgimg-2">
         <div class="caption">
             <!-- <span class="border">Scroll down</span> -->
         </div>
@@ -81,38 +81,75 @@
 
     <div style="color: #777;background-color:white; padding:50px 80px;">
         <h3 style="text-align:center;">portfolio</h3>
-        <div id="previous_works">
+        <div id="previous_works" class="flexCon imgCon">
 
-            <div id="second_left">
+            <div class="flexEle left">
                 <a href="xilinx.html">
                     <img src="css/images/xilinx.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
                 </a>
-                <p>Xilinx PHP Interface</p>
-                <p class="time_previous_work">Winter 2019</p>
+                <p><b>Xilinx PHP Interface</b></p>
+                <p class="desc">My first internship as an undergrad student was at Xilinx Asia Pacific Pte Ltd. During
+                    which, I had
+                    a
+                    chance to learn CSS to design my first website.</p>
+                <p class="time_previous_work">Winter 2017</p>
 
             </div>
-            <div id="second_right">
+            <div class="flexEle right">
                 <a href="continental.html">
                     <img src="css/images/continental.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
                 </a>
-                <p>Continental Confluence Dashboard</p>
-                <p class="time_previous_work">Winter 2019</p>
+                <p><b>Continental Confluence Dashboard</b></p>
+                <p class="desc">I designed an admin dashboard out of my own initiative as a tools for upper management
+                    to keep track
+                    of Confluence usage within Continental Automotive Singapore Pte Ltd.</p>
+                <p class="time_previous_work">Summer 2018</p>
 
             </div>
-            <div id="third_left">
+            <div class="flexEle left">
                 <a href="nus_cs_3240.html">
                     <img src="css/images/nus.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
                 </a>
-                <p>NUS CS3240 Interaction Design Project</p>
-                <p class="time_previous_work">Winter 2019</p>
+                <p><b>NUS CS3240 Interaction Design Project</b></p>
+                <p class="desc">A project where my team and I design prototypes of a task-gamifying mobile appication
+                    for <a href="http://nus.edu.sg/"></a>NUS
+                    students</p>
+                <p class="time_previous_work">Winter 2018</p>
 
             </div>
-            <div id="third_right">
-                <a href="case_study.html">
-                    <img src="css/images/case_study.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
+        </div>
+    </div>
+
+    <div class="bgimg-3">
+        <div class="caption">
+            <!-- <span class="border">Scroll down</span> -->
+        </div>
+        <section class="demo">
+            <a href="#case_studies"><span></span></a>
+        </section>
+    </div>
+
+    <div style="color: #777;background-color:white; padding:50px 80px;">
+        <h3 style="text-align:center;">Case Studies</h3>
+        <div id="case_studies" class="flexCon imgCon">
+
+            <div class="flexEle left">
+                <a href="https://www.interaction-design.org/literature/article/6-blind-men-walk-into-a-bar-the-ux-punchline">
+                    <img src="css/images/blind_men_elephant.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
                 </a>
-                <p>Case Study on Blah</p>
-                <p class="time_previous_work">Winter 2019</p>
+                <p><b>Blind Men and An Elephant</b></p>
+                <p class="desc">I first read the story of how 6 blind men went to see an elephant when I was 6 years
+                    old. I never
+                    thought of how we can draw lessons from the story from a designer's point of view</p>
+
+            </div>
+            <div class="flexEle right">
+                <a href="https://www.interaction-design.org/literature/article/the-seven-simple-principles-of-conversion-centred-design-ccd-and-how-to-use-them">
+                    <img src="css/images/contrasting_color.png" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
+                </a>
+                <p><b>The Use of Contrasting Color Schemes in Design</b></p>
+                <p class="desc">Colors are powerful in conveying a message. The use of contrasting colors make a design
+                    much more visually attractive.</p>
 
             </div>
         </div>

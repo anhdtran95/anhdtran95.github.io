@@ -12,16 +12,16 @@ $(function () {
             if (scroll > ex_me_os + ex_me_ht) {
                 // if not scroll past last sec
                 $('a[href="#experiences"]').removeClass('current');
-                $('a[href="#related_links"]').addClass('current');
+                $('a[href="#contact_me"]').addClass('current');
                 $('a[href="#about_me"]').removeClass('current');
             } else {
                 $('a[href="#experiences"]').addClass('current');
-                $('a[href="#related_links"]').removeClass('current');
+                $('a[href="#contact_me"]').removeClass('current');
                 $('a[href="#about_me"]').removeClass('current');
             }
         } else {
             $('a[href="#experiences"]').removeClass('current');
-            $('a[href="#related_links"]').removeClass('current');
+            $('a[href="#contact_me"]').removeClass('current');
             $('a[href="#about_me"]').addClass('current');
         }
     });
@@ -32,3 +32,33 @@ $("a[href*='#']").click(function () {
     var os = $(scrollDiv).offset().top - 200;
     $('html, body').animate({ scrollTop: os }, 'slow');
 });  
+
+$(function () {
+    $.ajax({
+        url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback',
+        dataType: 'jsonp'
+    });
+
+    // setInterval(function () {
+    //     $('.main').fadeOut("slow", function () {
+    //         $.ajax({
+    //             url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback',
+    //             dataType: 'jsonp'
+    //         });
+    //     })
+    // }, 10000);
+});
+
+function mycallback(e) {
+    console.log(e)
+    $(".main div blockquote").empty();
+    $(".main div blockquote").append(e[0].content);
+    $(".mb-author").text("~" + e[0].title);
+    $(".main").fadeIn("slow", function () {
+        console.log("quote successfully loaded!")
+    });
+}
+
+function contactMeButt(){
+    alert("Thank you for contacting me!")
+}

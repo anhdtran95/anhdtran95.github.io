@@ -29,7 +29,7 @@
 
             <div id="nav_right">
                 <ul class="nav">
-                    <li><a href="#related_links">Related Links</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
                     <li><a href="#experiences">Work Experiences</a></li>
                     <li><a href="#about_me" class="current">About Me</a></li>
                 </ul>
@@ -70,7 +70,7 @@
                 </div>
 
                 <h2><b>Tran Duy Anh</b></h2>
-                <h4>Very important person</h4>
+                <h4>Final-Year Engineering Student</h4>
                 <ul class="personal_details">
                     <li><b>Born: </b>October 31st, 1995</li>
                     <li><b>Nationality: </b>Vietnamese</li>
@@ -83,14 +83,29 @@
     <div id="about_me">
         <h1>About Me</h1>
         <hr>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis saepe ratione qui eaque nesciunt laborum,
-            pariatur illo quas ducimus in alias commodi deleniti ipsum esse illum dolore rem sequi. Rerum.</p>
+        <p style="font-size: 16px;">My name is <b>Tran Duy Anh</b>. I am currently a final year Electrical Engineering undergrad in <a href="">National
+                University of Singapore.</a> </p>
+        <p style="font-size: 16px;">I take pride in my work, and always try mybest at everything I do.</p>
+        <p style="font-size: 16px;">My other hobbies include listening to music, working out and playing Dota
+            2.</p>
     </div>
 
     <div class="bgimg-2">
-        <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Scroll Down</span>
-        </div>
+        <!-- <div class="caption"> -->
+        <!-- <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Scroll Down</span> -->
+        <section class="main">
+            <div class="mb-wrap mb-style-2">
+                <blockquote>
+                </blockquote>
+            </div>
+
+            <div class="mb-attribution">
+                <p class="mb-author">
+                </p>
+            </div>
+
+        </section>
+        <!-- </div> -->
     </div>
 
     <div id="experiences" style="position:relative;">
@@ -158,17 +173,85 @@
 
     <div class="bgimg-3">
         <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Scroll Down</span>
+            <span class="border" style="background-color:black;font-size:25px;color: #f7f7f7;"><a id="cv_download" href="resume.pdf"
+                    download="resume.pdf">Download My CV</a></span>
         </div>
     </div>
 
-    <div id="related_links" style="position:relative;">
+    <div id="contact_me" style="position:relative;">
 
         <div style="color:rgb(63, 63, 63);background-color:rgb(255, 255, 255);text-align:center;padding:50px 80px;text-align: justify;">
-            <h1 style="color: black;">Related Links</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsam rerum ullam sequi magni id cumque
-                natus aperiam deleniti officiis odit, nesciunt harum nemo, tenetur eos maxime cum ad ab?</p>
+            <h1 style="color: black;">Let's Get In Touch!</h1>
+            <hr>
+            <!-- <div class="row"> -->
+
+
+            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="name" class="form-control">
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <!-- <a class="btn btn-primary" onclick="contactMeButt();">Send Email</a> -->
+
+                <button type="button" class="btn btn-dark" onclick="contactMeButt();">Send Email</button>
+            </div>
+            <div class="status"></div>
         </div>
+        <!--Grid column-->
+
+
+
+        <!-- </div> -->
     </div>
 
     <div style="color:#ddd;background-color:#282E34;">

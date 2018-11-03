@@ -1,9 +1,7 @@
-/*entire body*/
 
-body {
-  /*font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;*/
-
-  /*background: linear-gradient( rgb(255, 94, 0), #bdf006) fixed;*/
+@font-face {
+  font-family: 'Google_Sans';
+  src: url('fonts/Product Sans Regular.ttf') format('truetype');
 }
 
 /* navigation bar */
@@ -84,12 +82,12 @@ body, html {
 
 .bgimg-2 {
   background-image: url("images/neighborhood_hipster.jpg");
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .bgimg-3 {
   background-image: url("images/darthvader_hipster.jpg");
-  min-height: 400px;
+  min-height: 300px;
 }
 
 .caption {
@@ -113,9 +111,10 @@ body, html {
   line-height: 70px;
 }
 
-h1{
+h1 {
   font: 'Google_Sans', sans-serif !important;
 }
+
 h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -138,62 +137,53 @@ h3 {
   white-space: nowrap;
 }
 
-#about_me, #previous_works {
+.flexCon {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-/*This is to fix the children height flowing out of parent*/
-
-#about_me:after, #previous_works:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-#first_left, #first_right {
+.flexEle{
   width: 50%;
-  /* position: relative; */
 }
 
-#second_left, #second_right, #third_left, #third_right {
-  width: 38%;
+.imgCon .flexEle {
+  width: 45%;
   height: 60vh;
-  background-size: cover;
-  background-position: center;
-  margin: 20px;
+  margin: 20px ;
   position: relative;
 }
 
 @media screen and (max-width:900px) {
-  #about_me, #previous_works {
+  .flexCon {
     justify-content: space-between;
   }
   #first_left {
-    width: 100%;
     order: 2;
   }
   #first_right {
-    width: 100%;
     order: 1;
   }
-  #second_left, #second_right, #third_left, #third_right{
-    width: 100%;
+  .flexEle {
+    width: 100% !important;
   }
+}
+
+.flexEle.left {
+  margin-right: auto;
 }
 
 #first_right {
   text-align: center;
 }
 
-#previous_works img {
+.imgCon img {
   object-fit: cover;
   object-position: center;
 }
 
-#previous_works img:hover {
+.imgCon img:hover {
   opacity: 0.5;
   cursor: pointer;
 }
@@ -202,6 +192,19 @@ h3 {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;
+  /* fallback */
+  max-height: 40px;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 /*chevron thing */
@@ -309,7 +312,7 @@ h3 {
 
 /*footer style*/
 
-footer p{
+footer p {
   margin: 0;
 }
 

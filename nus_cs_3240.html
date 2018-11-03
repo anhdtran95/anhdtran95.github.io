@@ -184,7 +184,7 @@
                 <div id="modalContainer">
 
                     <div id="modalContainerLayer" style="height: 70vh;">
-                        <img src="css/images/nus_mainpage.png">
+                        <img id="hModal" src="css/images/nus_mainpage.png">
                         <!-- Trigger/Open The Modal -->
                         <div id="modalButt" data-toggle="tooltip" data-placement="top" title="Click to interact!"></div>
                         <p id="widerBrowser">Please use a wider browser to load :)</p>
@@ -199,23 +199,23 @@
                             <h4 id="imgTitle">Landing Page Prototype</h4>
                             <img src="css/images/nus_mainpage.png" usemap="#screen1" class="proto proto1">
                             <map name="screen1">
-                                <area id="tooltipAreaH" shape="rect" coords="160, 45, 205, 60" href="#" onclick="nextScr(2); h(2); return false;"
+                                <area id="tooltipAreaH" shape="rect" coords="170, 50, 215, 65" href="#" onclick="nextScr(2); h(2); return false;"
                                     data-toggle="tooltip" data-placement="left" title="Click here to get started!">
                             </map>
                             <img src="css/images/nus_fight.png" usemap="#screen2" class="proto proto2" style="display: none;">
                             <map name="screen2">
-                                <area shape="rect" coords="57, 250, 105, 270" href="#" onclick="nextScr(1); h(1); return false;">
-                                <area shape="rect" coords="130, 250, 178, 270" href="#" onclick="nextScr(3); h(3); return false;">
+                                <area shape="rect" coords="60, 265, 110, 285" href="#" onclick="nextScr(1); h(1); return false;">
+                                <area shape="rect" coords="138, 265, 190, 285" href="#" onclick="nextScr(3); h(3); return false;">
                             </map>
                             <img src="css/images/nus_fight_done.png" usemap="#screen3" class="proto proto3" style="display: none;">
                             <map name="screen3">
-                                <area id="tooltipAreaH1" shape="rect" coords="21, 260, 212, 297" href="#" onclick="nextScr(4); h(4); return false;"
+                                <area id="tooltipAreaH1" shape="rect" coords="23, 274, 224, 315" href="#" onclick="nextScr(4); h(4); return false;"
                                     data-toggle="tooltip" title="Select this task!">
                             </map>
                             <img src="css/images/nus_set.png" usemap="#screen4" class="proto proto4" style="display: none;">
                             <map name="screen4">
-                                <area shape="rect" coords="57, 250, 105, 270" href="#" onclick="nextScr(3); h(3); return false;">
-                                <area shape="rect" coords="130, 250, 178, 270" href="#" onclick="nextScr(5); h(5); return false;">
+                                <area shape="rect" coords="60, 265, 110, 285" href="#" onclick="nextScr(3); h(3); return false;">
+                                <area shape="rect" coords="138, 265, 190, 285" href="#" onclick="nextScr(5); h(5); return false;">
                             </map>
                             <img src="css/images/nus_set_done.png" class="proto proto5">
                             <a href="#" onclick="nextScr(1); h(1); return false;" title="Click to replay!" data-toggle="tooltip"
@@ -252,22 +252,29 @@
             <br>
             <hr>
             <h3>Other works</h3>
-            <div id="other_projects">
-                <div id="first_left">
+            <div id="other_projects" class="flexCon imgCon">
+                <div class="flexEle left">
                     <a href="xilinx.html">
                         <img src="css/images/xilinx.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
                     </a>
-                    <p>Xilinx PHP Interface</p>
-                    <p class="time_previous_work">Winter 2019</p>
-
+                    <p><b>Xilinx PHP Interface</b></p>
+                    <p class="desc">My first internship as an undergrad student was at Xilinx Asia Pacific Pte Ltd. During
+                        which, I had
+                        a
+                        chance to learn CSS to design my first website.</p>
+                    <p class="time_previous_work">Winter 2017</p>
+    
                 </div>
-                <div id="first_right">
+                <div class="flexEle right">
                     <a href="continental.html">
                         <img src="css/images/continental.jpg" height="60%" width="100%" style="display: inline-block; margin: 10px 0px;">
                     </a>
-                    <p>Continental Confluence Dashboard</p>
-                    <p class="time_previous_work">Winter 2019</p>
-
+                    <p><b>Continental Confluence Dashboard</b></p>
+                    <p class="desc">I designed an admin dashboard out of my own initiative as a tools for upper management
+                        to keep track
+                        of Confluence usage within Continental Automotive Singapore Pte Ltd.</p>
+                    <p class="time_previous_work">Summer 2018</p>
+    
                 </div>
 
             </div>

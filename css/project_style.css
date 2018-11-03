@@ -12,29 +12,28 @@ a {
 }
 
 /* navigation bar */
-.navbar-inverse{
+
+.navbar-inverse {
   background-color: rgba(0, 0, 0, 0.527);
   border: none;
 }
 
-.navbar-inverse
-.navbar-brand{
+.navbar-inverse .navbar-brand {
   font-size: 16px;
   color: white;
 }
 
-.navbar-inverse
-.navbar-brand:hover{
+.navbar-inverse .navbar-brand:hover {
   color: rgb(201, 201, 201);
 }
 
-.navbar-inverse .navbar-nav>li>a{
+.navbar-inverse .navbar-nav>li>a {
   color: white;
 }
-.navbar-inverse .navbar-nav>li>a:hover{
+
+.navbar-inverse .navbar-nav>li>a:hover {
   color: rgb(201, 201, 201);
 }
-
 
 /*parallax effect*/
 
@@ -164,16 +163,16 @@ a.next {
 
 #tooltipAreaH {
   position: absolute;
-  left: 170px;
-  width: 45px;
-  top: 110px;
+  left: 190px;
+  /* width: 45px; */
+  top: 113px;
 }
 
 #tooltipAreaH1 {
   position: absolute;
   left: 40px;
   width: 200px;
-  top: 300px;
+  top: 330px;
 }
 
 .proto5 {
@@ -218,7 +217,7 @@ a.next {
   text-align: center;
 }
 
-#widerBrowser{
+#widerBrowser {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -344,7 +343,7 @@ a.next {
 }
 
 .section {
-  color: rgb(66, 66, 66);
+  color: rgb(114, 114, 114);
   /* background-color: rgba(228, 228, 228, 0.644); */
   padding: 50px 80px;
 }
@@ -353,37 +352,53 @@ hr {
   border-top: 1px solid rgb(177, 177, 177);
 }
 
-#other_projects {
+.flexCon {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-#first_left, #first_right {
-  width: 43%;
+.imgCon .flexEle {
+  width: 45%;
   height: 60vh;
   margin: 20px;
   position: relative;
+}
+
+.imgCon img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.imgCon img:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 20px;
+  /* fallback */
+  max-height: 40px;
+  /* fallback */
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 @media screen and (max-width:900px) {
   #about_me, #previous_works {
     justify-content: space-between;
   }
-  #first_left, #first_right {
+  .flexEle {
     width: 100%;
   }
-}
-
-#other_projects img {
-  object-fit: cover;
-  object-position: center;
-}
-
-#other_projects img:hover {
-  opacity: 0.5;
-  cursor: pointer;
+  #xModal {
+    width: 100%;
+  }
 }
 
 .time_previous_work {
