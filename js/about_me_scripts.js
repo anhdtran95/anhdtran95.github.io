@@ -35,7 +35,7 @@ $("a[href*='#']").click(function () {
 
 $(function () {
     $.ajax({
-        url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback',
+        url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback',
         dataType: 'jsonp'
     });
 
